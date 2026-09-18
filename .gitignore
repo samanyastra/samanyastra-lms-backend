@@ -52,3 +52,6 @@ Thumbs.db
 # Type checking / linting caches
 .mypy_cache/
 .ruff_cache/
+
+env/*
+env

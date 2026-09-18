@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'core',
 ]
 
 MIDDLEWARE = [
@@ -115,3 +116,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
 STATIC_URL = 'static/'
+
+
+# Default primary key field type
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+# ── AI ops (see core/ai_ops/, settings_ai.py) ──
+# Bedrock/model config lives in its own file so it can be reviewed and
+# changed independently of the rest of these settings.
+from .settings_ai import *  # noqa: E402,F401,F403
